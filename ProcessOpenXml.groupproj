@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5EC92AD8-59D7-4594-A20E-405610FD314A}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="OpenXml.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="CreateWord\CreateWord.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ComplexWord\ComplexWord.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="OpenXml">
+        <MSBuild Projects="OpenXml.dproj"/>
+    </Target>
+    <Target Name="OpenXml:Clean">
+        <MSBuild Projects="OpenXml.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="OpenXml:Make">
+        <MSBuild Projects="OpenXml.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CreateWord">
+        <MSBuild Projects="CreateWord\CreateWord.dproj"/>
+    </Target>
+    <Target Name="CreateWord:Clean">
+        <MSBuild Projects="CreateWord\CreateWord.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CreateWord:Make">
+        <MSBuild Projects="CreateWord\CreateWord.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ComplexWord">
+        <MSBuild Projects="ComplexWord\ComplexWord.dproj"/>
+    </Target>
+    <Target Name="ComplexWord:Clean">
+        <MSBuild Projects="ComplexWord\ComplexWord.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ComplexWord:Make">
+        <MSBuild Projects="ComplexWord\ComplexWord.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="OpenXml;CreateWord;ComplexWord"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="OpenXml:Clean;CreateWord:Clean;ComplexWord:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="OpenXml:Make;CreateWord:Make;ComplexWord:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/11/10 10:25:17.000.091,=D:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2019/11/03 08:19:37.000.171,=D:\Documentos\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2019/11/03 08:22:38.000.306,D:\Documentos\Embarcadero\Studio\Projects\OpenXml\ComplexWord\Unit3.dfm=D:\Documentos\Embarcadero\Studio\Projects\Unit3.dfm</Transaction>
+    <Transaction>2019/11/03 08:22:38.000.306,D:\Documentos\Embarcadero\Studio\Projects\OpenXml\ComplexWord\Unit3.pas=D:\Documentos\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>2019/11/03 08:22:48.000.115,D:\Documentos\Embarcadero\Studio\Projects\OpenXml\ComplexWord\ComplexWord.dproj=D:\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
